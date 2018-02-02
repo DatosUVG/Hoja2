@@ -29,17 +29,37 @@ public class Calculadora {
            
            var[i] = Integer.parseInt(s.peek());
            
-           if(s.peek() == "+"){               
-               res = res + var[i-1];               
+           if(s.peek() == "+"){     
+               if(res != 0){
+                res = res + var[i-1];
+               }       
+               else{
+                   res = var[i-2] + var[i-1];
+               }
            }
            else if(s.peek() == "-"){
+                if(res != 0){
                 res = res - var[i-1];
+               }       
+               else{
+                   res = var[i-2] - var[i-1];
+               }
             }
            else if(s.peek() == "*"){
-               res = res * var[i-1];
+               if(res != 0){
+                res = res * var[i-1];
+               }       
+               else{
+                   res = var[i-2] * var[i-1];
+               }
            }
            else if(s.peek() == "/"){               
-               res = res / var[i-1];            
+               if(res != 0){
+                res = res / var[i-1];
+               }       
+               else{
+                   res = var[i-2] / var[i-1];
+               }           
            }
            
            stack.pop();
