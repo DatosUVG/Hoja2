@@ -11,4 +11,11 @@ package hoja2;
  */
 public class Calculadora {
     
+    public void calcular(String calcular){
+        
+        
+        
+        
+    }
+    
 }

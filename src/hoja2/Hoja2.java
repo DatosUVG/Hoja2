@@ -5,6 +5,9 @@
  */
 package hoja2;
 
+
+import java.io.*;
+
 /**
  *
  * @author Andres
@@ -16,6 +19,28 @@ public class Hoja2 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        String direccion; //direccion del archivo
+        String texto = "";
+        
+        try{
+            BufferedReader bf = new BufferedReader(new FileReader(direccion));
+            String temp = "";
+            String bfRead;
+            while((bfRead = bf.readLine()) !=null){
+                temp = temp + bfRead;
+            }
+            
+            texto = temp;
+            
+        }catch(Exception e){
+            
+            System.out.println("No se encntro archivo");
+            
+        }
+        
+        
+        
     }
     
 }
