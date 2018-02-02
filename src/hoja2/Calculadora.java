@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package hoja2;
+import java.util.*;
 
 /**
  *
@@ -11,9 +12,19 @@ package hoja2;
  */
 public class Calculadora {
     
-    public void calcular(String calcular){
+    StackVector st = new StackVector();
+    
+    public void calcular(String texto){
         
-        
+       Stack<String> stack = st.Stack(texto);
+       
+       Stack<String> s;
+       
+       for(int i = 0; i < stack.size(); i++){
+           
+           s.push(stack);
+           
+       }
         
         
     }

@@ -19,6 +19,7 @@ public class Hoja2 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Calculadora calc = new Calculadora();
         
         String direccion; //direccion del archivo
         String texto = "";
@@ -38,6 +39,8 @@ public class Hoja2 {
             System.out.println("No se encntro archivo");
             
         }
+        
+        calc.calcular(texto);
         
         
         
