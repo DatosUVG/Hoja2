@@ -40,8 +40,10 @@ public class Hoja2 {
             
         }
         
-        calc.calcular(texto);
+        int resultado = calc.calcular(texto);
         
+        
+        System.out.println("El resultado es: " + resultado);
         
         
     }

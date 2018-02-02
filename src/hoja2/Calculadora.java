@@ -14,19 +14,39 @@ public class Calculadora {
     
     StackVector st = new StackVector();
     
-    public void calcular(String texto){
+    public int calcular(String texto){
         
        Stack<String> stack = st.Stack(texto);
        
-       Stack<String> s;
+       Stack<String> s = new Stack<String>();
+       
+       int var[] = new int[stack.size()];
+       int res = 0;
        
        for(int i = 0; i < stack.size(); i++){
            
-           s.push(stack);
+           s.push(stack.peek());
+           
+           var[i] = Integer.parseInt(s.peek());
+           
+           if(s.peek() == "+"){               
+               res = res + var[i-1];               
+           }
+           else if(s.peek() == "-"){
+                res = res - var[i-1];
+            }
+           else if(s.peek() == "*"){
+               res = res * var[i-1];
+           }
+           else if(s.peek() == "/"){               
+               res = res / var[i-1];            
+           }
+           
+           stack.pop();
            
        }
         
-        
+        return res;
     }
     
 }
