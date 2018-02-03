@@ -14,6 +14,8 @@ import java.util.Stack;
 
 
 public class ImpCal implements CalculadoraI{
+    
+    //Errors 
     private final String ERROR_INVALID_CHAR = "ERROR: Expression contains an invalid character";
     private final String ERROR_INVALID_DIVISION = "ERROR: This division is not posible";
     private final String ERROR_INSUFFICIENT = "ERROR: Operation couldn't take place because of an error in the document.";
@@ -25,6 +27,11 @@ public class ImpCal implements CalculadoraI{
     public ImpCal(){
         stack = new ImpStack();
     }
+    
+    /* 
+    * @param exp
+    * calculates based on the expression
+    */
     
     @Override
     public String calcular(String exp){

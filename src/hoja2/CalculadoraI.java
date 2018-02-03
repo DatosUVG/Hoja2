@@ -10,7 +10,7 @@ package hoja2;
  * @author andyq
  */
 public interface CalculadoraI {
-    
+    //Abstract class 
     public String calcular(String exp);
     
 }

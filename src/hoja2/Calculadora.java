@@ -15,14 +15,14 @@ public class Calculadora {
     StackVector st = new StackVector();
     
     public int calcular(String texto){
-        
+        //creacion de stack
        Stack<String> stack = st.Stack(texto);
        
        Stack<String> s = new Stack<String>();
        
        int var[] = new int[stack.size()];
        int res = 0;
-       
+       //Stack search
        for(int i = 0; i < stack.size(); i++){
            
            s.push(stack.peek());
@@ -61,7 +61,7 @@ public class Calculadora {
                    res = var[i-2] / var[i-1];
                }           
            }
-           
+           //Pop
            stack.pop();
            
        }
