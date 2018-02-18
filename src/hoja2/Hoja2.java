@@ -27,6 +27,7 @@ public class Hoja2 {
         String texto = "";
         
         try{
+            
             BufferedReader bf = new BufferedReader(new FileReader(direccion));
             String temp = "";
             String bfRead;
